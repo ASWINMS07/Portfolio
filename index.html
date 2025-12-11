@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aswin M S | Cybersecurity</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <div class="desktop-icons">
+        <div class="icon" ondblclick="openWindow('bio')">
+            <img src="https://img.icons8.com/color/48/info.png" alt="Bio">
+            <span>Biography</span>
+        </div>
+        <div class="icon" ondblclick="openWindow('resume')">
+            <img src="https://img.icons8.com/color/48/resume.png" alt="Resume">
+            <span>Resume</span>
+        </div>
+        <div class="icon" ondblclick="openLink('https://github.com/ASWINMS07')">
+            <img src="https://img.icons8.com/color/48/github.png" alt="GitHub">
+            <span>GitHub</span>
+        </div>
+        <div class="icon" ondblclick="openLink('https://tryhackme.com/p/AswinMS')">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tryhackme.svg" style="width:48px;height:48px;background:#9fe869;">
+            <span>TryHackMe</span>
+        </div>
+        <div class="icon" ondblclick="openLink('https://www.linkedin.com/in/msaswin07/')">
+            <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+        </div>
+        <div class="icon" ondblclick="openLink('https://www.instagram.com/m_s_aswin__')">
+            <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram">
+            <span>Instagram</span>
+        </div>
+        <div class="icon" ondblclick="openLink('https://x.com/Aswinms007')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/X_logo_2023_%28white%29.png/640px-X_logo_2023_%28white%29.png" alt="X">
+            <span>X</span>
+        </div>
+        <div class="icon" ondblclick="openLink('https://discord.com/users/aswin07750')">
+            <img src="https://img.icons8.com/color/48/discord-logo.png" alt="Discord">
+            <span>Discord</span>
+        </div>
+    </div>
+
+    <div id="window" class="window hidden">
+        <div class="title-bar" onmousedown="dragStart(event)">
+            <img src="https://img.icons8.com/color/16/hacker.png" alt="icon">
+            <span id="window-title">Title</span>
+            <button class="close-btn" onclick="closeWindow()">X</button>
+        </div>
+        <div class="content" id="window-content"></div>
+    </div>
+
+    <div class="taskbar">
+        <button class="start-btn" onclick="toggleStartMenu()">
+            <img src="https://img.icons8.com/color/24/windows-95.png" alt="Start"> Start
+        </button>
+        <div id="start-menu" class="start-menu hidden">
+            <div class="menu-item">Aswin M S</div>
+            <hr>
+            <div class="menu-item" onclick="openWindow('bio')">Biography</div>
+            <div class="menu-item" onclick="openWindow('resume')">Resume</div>
+            <div class="menu-item" onclick="openLink('https://github.com/ASWINMS07')">GitHub</div>
+            <div class="menu-item">Shut Down...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
